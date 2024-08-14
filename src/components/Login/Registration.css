@@ -1,0 +1,66 @@
+.registration-container {
+    background-color: #2c3e50;
+    width: 350px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #ecf0f1;
+  }
+  
+  .registration-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #ecf0f1;
+  }
+  
+  .registration-container input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    background-color: #34495e;
+    color: #ecf0f1;
+  }
+  
+  .registration-container input:focus {
+    outline: none;
+    border-color: #2980b9;
+    background-color: #3b5367;
+  }
+  
+  .registration-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .registration-container button:hover {
+    background-color: #1a5276;
+  }
+  
+  .registration-container p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+  }
+  
+  .registration-container a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  .registration-container a:hover {
+    text-decoration: underline;
+  }
+  
