@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css'
 import LandingPage from './components/LandingPage/LandingPage.jsx'
 import Registration from './components/Login/Registration.jsx'
