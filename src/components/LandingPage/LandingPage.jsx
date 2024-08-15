@@ -6,6 +6,7 @@ import './LandingPage.css';
 import Header from './Header';
 import Footer from './Footer';
 import FeaturedPapers from './FeaturedPapers';
+import {KeyFeaturesSection} from './Features';
 
 const LandingPage = () => {
     return (
@@ -19,6 +20,7 @@ const LandingPage = () => {
                 <Link to="" className="about-us">More About Us</Link>
             </div>
             <FeaturedPapers />
+            <KeyFeaturesSection />
             <Footer />
         </div>
     );
