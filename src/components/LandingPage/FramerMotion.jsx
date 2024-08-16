@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
+import PropTypes from 'prop-types';
 import { motion } from "framer-motion";
 
 function FramerMotion({children}) {
@@ -12,5 +14,9 @@ function FramerMotion({children}) {
     </motion.div>
   )
 }
+
+FramerMotion.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default FramerMotion
