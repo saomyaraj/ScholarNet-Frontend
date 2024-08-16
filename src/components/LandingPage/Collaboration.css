@@ -1,0 +1,43 @@
+.rectangular-section {
+    background-color: #34495e;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangular-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    color: #ecf0f1;
+}
+
+.rectangular-text {
+    margin-top: 80px;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.rectangular-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.rectangular-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rectangular-image {
+    flex: 1;
+    text-align: right;
+}
+
+.rectangular-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

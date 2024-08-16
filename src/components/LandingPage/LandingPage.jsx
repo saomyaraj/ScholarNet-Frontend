@@ -8,8 +8,10 @@ import Footer from './Footer';
 import FeaturedPapers from './FeaturedPapers';
 import {KeyFeaturesSection} from './Features';
 import FramerMotion from './FramerMotion';
-
-
+import RDRectangularSection from './ResearchDiscussion';
+import TPRectangularSection from './TopPapers';
+import CORectangularSection from './Collaboration';
+import CPRectangularSection from './CustomProfile';
 
 const LandingPage = () => {
     return (
@@ -24,6 +26,15 @@ const LandingPage = () => {
             </div>
             <FramerMotion children={<FeaturedPapers/>} />
             <FramerMotion children={<KeyFeaturesSection />} />  
+                <button className='explore-button'>&#127760; Explore</button>
+                <Link to="" className="about-us">Learn More</Link>
+            </div>
+            <FeaturedPapers />
+            <KeyFeaturesSection />
+            <RDRectangularSection />
+            <TPRectangularSection />
+            <CORectangularSection />
+            <CPRectangularSection />
             <Footer />
         </div>
     );
