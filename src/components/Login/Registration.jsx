@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Registration.css';
+import Login from './LoginPage';
 
 const Registration = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Registration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    navigate('/LoginPage');
+    navigate('/login');
   };
 
   return (

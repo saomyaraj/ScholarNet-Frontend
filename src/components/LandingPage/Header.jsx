@@ -14,8 +14,7 @@ const Header = () => {
                     <input type="text" className='search-bar' placeholder='Search academic papers...'/>
                 </div>
                 <div className='navbar-right'>
-                    <Link to="/register" className="nav-link">Join Discussion</Link>
-                    {/* <Link to="/login" className="nav-link">Login</Link> */}
+                    <Link to="/login" className="nav-link">Join Discussion</Link>
                 </div>
             </nav>
         </header>
