@@ -12,6 +12,8 @@ import RDRectangularSection from './ResearchDiscussion';
 import TPRectangularSection from './TopPapers';
 import CORectangularSection from './Collaboration';
 import CPRectangularSection from './CustomProfile';
+import FAQSection from './FAQSection';
+import NewsletterSignUp from './Newsletter';
 
 const LandingPage = () => {
     return (
@@ -30,7 +32,19 @@ const LandingPage = () => {
             <FramerMotion>
               <KeyFeaturesSection />
             </FramerMotion>
-        </div><RDRectangularSection /><TPRectangularSection /><CORectangularSection /><CPRectangularSection /><Footer /></>
+            <FramerMotion>
+            <RDRectangularSection />
+            </FramerMotion>
+            <FramerMotion>
+            <TPRectangularSection />
+            </FramerMotion>
+            <FramerMotion>
+            <CORectangularSection />
+            </FramerMotion>
+            <FramerMotion>
+            <CPRectangularSection />
+            </FramerMotion>
+        </div><FAQSection /><NewsletterSignUp /><Footer /></>
             );
         };
 

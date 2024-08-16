@@ -1,17 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import './TopPapers.css';
+import './ResearchDiscussion.css';
+import TPImage from '../../assets/2.png';
 
 function TPRectangularSection() {
     return (
-        <div className='rectanggular-section'>
+        <div className='rectangular-section'>
             <div className='rectangular-content'>
                 <div className='rectangular-text'>
-                    <h2>Get Top Papers</h2>
-                    <p>Get Top Research Papers of your interests and domain in your dashboard.</p>
+                    <h2>Top Papers</h2>
+                    <p>Get top papers of your interest and domain directly in your dashboard.</p>
                 </div>
-                <div className='rectangular image'>
-                    <img src="" alt="Top Paper Example" />
+                <div className='rectangular-image'>
+                    <img src={TPImage} alt="Research Discussion Example" />
                 </div>
             </div>
         </div>
