@@ -30,7 +30,7 @@ const LandingPage = () => {
             <FramerMotion>
               <KeyFeaturesSection />
             </FramerMotion>
-        </div><FeaturedPapers /><KeyFeaturesSection /><RDRectangularSection /><TPRectangularSection /><CORectangularSection /><CPRectangularSection /><Footer /></>
+        </div><RDRectangularSection /><TPRectangularSection /><CORectangularSection /><CPRectangularSection /><Footer /></>
             );
         };
 
