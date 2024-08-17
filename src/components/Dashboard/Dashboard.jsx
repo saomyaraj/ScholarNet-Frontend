@@ -4,6 +4,7 @@ import Navbar from './Navigation Bar/NavigationBar';
 import BookmarkSection from './Bookmarks';
 import Notes from './Notes';
 import RecentActivity from './RecentActivity';
+import Footer from './Footer';
 
 function Dashboard() {
     return (
@@ -12,6 +13,7 @@ function Dashboard() {
             <BookmarkSection />
             <Notes />
             <RecentActivity />
+            <Footer />
         </div>
     );
 }
