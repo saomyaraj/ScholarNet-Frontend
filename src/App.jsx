@@ -9,7 +9,6 @@ import Login  from './components/Login/LoginPage.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 
 function App() {
-
   return (
     <Router>
       <Routes>
