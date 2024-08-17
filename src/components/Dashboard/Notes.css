@@ -1,0 +1,55 @@
+.notes-section {
+    width: 30%;
+    margin-top: 80px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.notes-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.notes-container {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #34495e #ecf0f1;
+}
+
+.notes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.notes-container::-webkit-scrollbar-thumb {
+    background-color: #34495e;
+    border-radius: 10px;
+}
+
+.notes-container::-webkit-scrollbar-track {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+}
+
+.note-card {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #34495e;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.note-card:hover {
+    background-color: #e1e1e1;
+    transform: translateY(-2px);
+}
