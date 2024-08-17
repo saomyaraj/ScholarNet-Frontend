@@ -4,7 +4,7 @@ import './Explore.css';
 
 function Explore() {
     return (
-        <button className='explore'>Explore</button>
+        <button className='explore'>&#127760; Explore</button>
     );
 }
 
