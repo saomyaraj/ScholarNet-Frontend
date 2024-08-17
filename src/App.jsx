@@ -6,6 +6,7 @@ import './App.css'
 import LandingPage from './components/LandingPage/LandingPage.jsx'
 import Registration from './components/Login/Registration.jsx'
 import Login  from './components/Login/LoginPage.jsx';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Registration />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       </ Routes>
     </ Router>
   );
