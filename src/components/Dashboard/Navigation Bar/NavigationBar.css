@@ -4,4 +4,78 @@
     align-items: center;
     padding: 10px 20px;
     background-color: #34495e;
+    overflow: hidden;
+}
+
+.navbar-brand {
+    font-size: 31px;
+    font-weight: bold;
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 0;
+}
+
+.search-bar {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    flex: 1; /* Allows the search bar to take up remaining space */
+    min-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #2c3e50;
+    outline: none;
+    border-radius: 10px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    transition: border 0.5s ease;
+}
+
+.explore {
+    color: black;
+    background-color: #ecf0f1;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .explore:hover {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbar-icons > * {
+    margin-left: 15px;
+    color: #ecf0f1;
+    font-size: 18px;
+}
+
+.user-profile,
+.notifications,
+.messaging,
+.logout-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.user-profile img,
+.notifications img,
+.messaging img,
+.logout-button img {
+    width: 26px;
+    height: 26px;
 }

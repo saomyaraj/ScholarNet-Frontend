@@ -5,8 +5,8 @@ import './UserProfile.css';
 function UserProfile() {
     return (
             <div className='user-profile'>
-                <img src="" alt="User Profile" className='profile-picture'/>
-                <span className='user-name'>John Doe</span>
+                <img src="" alt="" className='profile-picture'/>
+                <span className='user-name'></span>
             </div>
         );
 }
