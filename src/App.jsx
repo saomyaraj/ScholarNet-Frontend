@@ -8,7 +8,6 @@ import Registration from './components/Login/Registration.jsx'
 import Login  from './components/Login/LoginPage.jsx';
 
 function App() {
-
   return (
     <Router>
       <Routes>

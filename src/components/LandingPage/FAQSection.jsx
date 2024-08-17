@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import './FAQSection.css';
 import PropTypes from 'prop-types';
+import Faq from './Faq';
 
 function FAQItem({ question, answer }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,9 +48,10 @@ export default function FAQSection() {
     return (
         <div className='faq-section'>
             <h2>Frequently Asked Questions</h2>
-            {faqData.map((item, index)=>(
+            <Faq/>
+            {/* {faqData.map((item, index)=>(
                 <FAQItem key={index} question={item.question} answer={item.answer} />
-            ))}
+            ))} */}
         </div>
     );
 }

@@ -14,8 +14,10 @@ import CORectangularSection from './Collaboration';
 import CPRectangularSection from './CustomProfile';
 import FAQSection from './FAQSection';
 import NewsletterSignUp from './Newsletter';
+import Faq from './Faq';
 
 const LandingPage = () => {
+
     return (
         <><div className='landing-page'>
             <Header />
@@ -44,7 +46,9 @@ const LandingPage = () => {
             <FramerMotion>
             <CPRectangularSection />
             </FramerMotion>
-        </div><FAQSection /><NewsletterSignUp /><Footer /></>
+
+        </div><FAQSection /><NewsletterSignUp /><Footer />
+        </>
             );
         };
 
