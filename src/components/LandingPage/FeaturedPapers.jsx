@@ -1,9 +1,15 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import './FeaturedPapers.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useState } from 'react';
+
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient("https://cguqhphvrfcsnaxovdin.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNndXFocGh2cmZjc25heG92ZGluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQxNjQ4NzAsImV4cCI6MjAzOTc0MDg3MH0.EwT4VAtOcP5xu2anfvxDlvnYG87b_qliDo39RKMGyu8");
+
 
 const papers = [
     { id: 1, title: 'Paper Title 1', image: '/images/paper1.jpg', description: 'Brief description of paper 1' },
@@ -15,6 +21,7 @@ const papers = [
 ];
 
 const FeaturedPapers = () => {
+
     const settings = {
         dots: false,
         infinite: true,
