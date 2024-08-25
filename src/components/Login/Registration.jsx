@@ -17,11 +17,29 @@ const Registration = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    navigate('/login');
+    try {
+      const response = await fetch('http://localhost:5000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        navigate('/login');
+      } else {
+        console.error(data.error);
+      }
+    } catch (error) {
+      console.error('Registration failed:', error);
+    }
   };
+  
 
   return (
     <div className="registration-container">

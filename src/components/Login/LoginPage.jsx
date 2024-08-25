@@ -15,11 +15,30 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    navigate('/src/components/Dashboard/Dashboard.jsx');
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch('http://localhost:5000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      localStorage.setItem('token', data.token);
+      navigate('/dashboard');
+    } else {
+      console.error(data.error);
+    }
+  } catch (error) {
+    console.error('Login failed:', error);
+  }
+};
+
 
   return (
     <div className="login-container">
