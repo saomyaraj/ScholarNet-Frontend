@@ -5,14 +5,33 @@ import { GoogleLogin } from "@react-oauth/google"
 
 export default function RegistrationPage2() {
 
-  const handleLoginSuccess = (response) => {
-    console.log('Login Success:', response);
+  const handleLoginSuccess = async (response) => {
+    console.log('Login Success:', response.credential);
+    const token  = response.credential
+    const res = await fetch("http://localhost:3000/auth/google",{
+      method:"POST",
+      mode:"cors",
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`, // Securely sending the token
+
+      },
+      body: JSON.stringify({token}), // Token is sent here as well for redundancy
+
+    })
+    const resAns = await res.json()
+    console.log(resAns);
   };
 
   const handleLoginFailure = (error) => {
     console.log('Login Failed:', error);
   };
-  
+
+  const githubAuth = () => {
+    const url = "https://github.com/login/oauth/authorize?client_id=Ov23lipQIGcQbf666slk&redirect_uri=http://localhost:3000/github/callback&scope=user"
+    window.location.href = url
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
@@ -56,7 +75,10 @@ export default function RegistrationPage2() {
               />
             </div>
           </div>
-          <div>
+          {/* <div>
+            <Label htmlFor="password" className="block text-sm font-normal text-gray-500 text-center">Passwordless auth :)</Label>
+          </div> */}
+          {/* <div>
             <Label htmlFor="password" className="block text-sm font-normal text-muted-foreground text-left ">
               Password
             </Label>
@@ -70,7 +92,7 @@ export default function RegistrationPage2() {
                 className="block w-full appearance-none rounded-md border border-input bg-background px-3 py-2 text-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm border-gray-300"
               />
             </div>
-          </div>
+          </div> */}
           <div>
             <Button
               type="submit"
@@ -86,7 +108,7 @@ export default function RegistrationPage2() {
           <div className="flex-1 border-t border-muted border-gray-300" />
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <Button variant="outline" className="flex items-center justify-center border-gray-300">
+          <Button variant="outline" className="flex items-center justify-center border-gray-300" onClick = {githubAuth}>
             <GithubIcon className="mr-2 h-5 w-5" />
             GitHub
           </Button>
