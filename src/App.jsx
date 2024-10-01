@@ -4,11 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css'
 import LandingPage from './components/LandingPage/LandingPage.jsx'
-import Registration from './components/Login/Registration.jsx'
 import Login  from './components/Login/LoginPage.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import LandingPage2 from './components/LandingPage/LandingPage2';
-import RegistrationPage2 from './components/Login/RegistrationPage2';
+import Registration from './components/Login/Registration';
 function App() {
   return (
     <Router>
@@ -16,7 +15,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/landingPage" element={<LandingPage2 />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<RegistrationPage2 />} />
+      <Route path="/register" element={<Registration />} />
       <Route path="/dashboard" element={<Dashboard />} />
       </ Routes>
     </ Router>
