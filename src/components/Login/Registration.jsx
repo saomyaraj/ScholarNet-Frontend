@@ -6,29 +6,48 @@ import { GoogleLogin } from "@react-oauth/google"
 
 export default function Registration() {
 
-  const handleLoginSuccess = (response) => {
-    console.log('Login Success:', response);
+  const handleLoginSuccess = async (response) => {
+    console.log('Login Success:', response.credential);
+    const token  = response.credential
+    const res = await fetch("http://localhost:3000/auth/google",{
+      method:"POST",
+      mode:"cors",
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`, // Securely sending the token
+
+      },
+      body: JSON.stringify({token}), // Token is sent here as well for redundancy
+
+    })
+    const resAns = await res.json()
+    console.log(resAns);
   };
 
   const handleLoginFailure = (error) => {
     console.log('Login Failed:', error);
+  };
+
+  const githubAuth = () => {
+    const url = "https://github.com/login/oauth/authorize?client_id=Ov23lipQIGcQbf666slk&redirect_uri=http://localhost:3000/github/callback&scope=user"
+    window.location.href = url
   };
   
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-foreground">Create your account</h2>
+          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-foreground" style={{ color: '#ecf0f1' }}>Create your account</h2>
           <p className="mt-2 text-center text-sm text-muted-foreground">
-            Or{" "}
-            <a href="#" className="font-normal  text-primary hover:text-primary-foreground " >
-              sign in to your existing account
+            {" "}
+            <a href="#" className="font-normal  text-primary hover:text-primary-foreground " style={{ color: '#ecf0f1' }}>
+              or sign in to your existing account
             </a>
           </p>
         </div>
         <form className="space-y-6" action="#" method="POST">
           <div>
-            <Label htmlFor="name" className="block text-sm font-normal text-muted-foreground text-left">
+            <Label htmlFor="name" className="block text-sm font-normal text-muted-foreground text-left" style={{ color: '#ecf0f1' }}>
               Name
             </Label>
             <div className="mt-1">
@@ -43,7 +62,7 @@ export default function Registration() {
             </div>
           </div>
           <div>
-            <Label htmlFor="email" className="block text-sm font-normal text-muted-foreground text-left">
+            <Label htmlFor="email" className="block text-sm font-normal text-muted-foreground text-left" style={{ color: '#ecf0f1' }}>
               Email address
             </Label>
             <div className="mt-1">
@@ -58,7 +77,7 @@ export default function Registration() {
             </div>
           </div>
           <div>
-            <Label htmlFor="password" className="block text-sm font-normal text-muted-foreground text-left ">
+            <Label htmlFor="password" className="block text-sm font-normal text-muted-foreground text-left " style={{ color: '#ecf0f1' }}>
               Password
             </Label>
             <div className="mt-1">
@@ -83,7 +102,7 @@ export default function Registration() {
         </form>
         <div className="flex items-center justify-between">
           <div className="flex-1 border-t border-muted border-gray-300" />
-          <div className="px-4 text-sm font-normal text-muted-foreground">Or sign up with</div>
+          <div className="px-4 text-sm font-normal text-muted-foreground" style={{ color: '#ecf0f1' }}>Or sign up with</div>
           <div className="flex-1 border-t border-muted border-gray-300" />
         </div>
         <div className="grid grid-cols-2 gap-4">

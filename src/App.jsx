@@ -6,14 +6,13 @@ import './App.css'
 import LandingPage from './components/LandingPage/LandingPage.jsx'
 import Login  from './components/Login/LoginPage.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
-import LandingPage2 from './components/LandingPage/LandingPage2';
 import Registration from './components/Login/Registration';
 function App() {
   return (
     <Router>
       <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/landingPage" element={<LandingPage2 />} />
+      <Route path="/landingPage" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Registration />} />
       <Route path="/dashboard" element={<Dashboard />} />
